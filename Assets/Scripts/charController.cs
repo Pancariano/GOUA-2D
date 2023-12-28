@@ -4,15 +4,26 @@ using UnityEngine;
 
 public class charController : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public float speed = 0.0f;
+    Rigidbody2D _rb2D;
+    Animator _animator;
+
     void Start()
     {
         
+        _rb2D = GetComponent<Rigidbody2D>();
+        _animator = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        _animator.SetFloat("speed", speed);
+        _rb2D.velocity = new Vector2(speed, .0f);
+
+        if (Input.GetKey(KeyCode.Space))
+        { speed = 1.0f; }
+
+        else
+        { speed = 0.0f; }
     }
 }
