@@ -10,16 +10,19 @@ public class charController : MonoBehaviour
 
     void Start()
     {
-        
         _rb2D = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
+    }
+
+    private void FixedUpdate()
+    {
+        _rb2D.velocity = new Vector2(speed, .0f);
     }
 
     void Update()
     {
         _animator.SetFloat("speed", speed);
-        _rb2D.velocity = new Vector2(speed, .0f);
-
+       
         if (Input.GetKey(KeyCode.D))
         { speed = 1.0f; }
 
