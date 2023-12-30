@@ -22,7 +22,7 @@ public class nextLevel : MonoBehaviour
         }
     }
 
-    private void StartLevel()
+    public void StartLevel()
     {
         SceneManager.LoadScene(_scene.buildIndex + 1);
     }
