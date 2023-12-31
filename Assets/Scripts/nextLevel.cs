@@ -11,6 +11,7 @@ public class nextLevel : MonoBehaviour
     private void Awake()
     {
         _scene = SceneManager.GetActiveScene();
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
