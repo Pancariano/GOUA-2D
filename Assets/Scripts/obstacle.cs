@@ -16,6 +16,7 @@ public class obstacle : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("player"))
         {
+            ScoreManager.lives--;
             SceneManager.LoadScene(_scene.name);
         }
     }

@@ -6,5 +6,5 @@ using TMPro;
 public class ScoreManager : MonoBehaviour
 {
     public static int totalScore;
-    
+    public static int lives = 3;
 }
